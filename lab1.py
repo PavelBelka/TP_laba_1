@@ -2,7 +2,6 @@ import requests
 from sqlalchemy import create_engine, Table, Column, String, Float, MetaData
 from sqlalchemy.sql import select
 
-
 class WeatherProvider:
     def __init__(self, key):
         self.key = key
@@ -31,7 +30,24 @@ class WeatherProvider:
         ]
 
 
-engine = create_engine('sqlite:///weather.sqlite3')
+class Sql_bd(object):
+    def __init__(self, url, metadata_in, provider_in, table_in):
+        self.url_sql = url
+        self.provider = provider_in
+        self.table = table_in
+        self.metadata = metadata_in
+        self.engine = create_engine(self.url_sql)
+        self.metadata.create_all(self.engine)
+        self.c = self.engine.connect()
+
+    def get_data(self, locate, start_time, end_time):
+        self.c.execute(self.table.insert(), self.provider.get_data(locate, start_time, end_time))
+
+    def to_print(self):
+        for row in self.c.execute(select([self.table])):
+            print(row)
+
+
 metadata = MetaData()
 weather = Table(
     'weather',
@@ -42,12 +58,12 @@ weather = Table(
     Column('location', String),
     Column('humidity', Float),
 )
-metadata.create_all(engine)
-
-c = engine.connect()
-
 provider = WeatherProvider('I3D60I88UB6KPSDAVGK38HNP5')
-c.execute(weather.insert(), provider.get_data('Volgograd,Russia', '2020-09-20', '2020-09-29'))
+bd = Sql_bd('sqlite:///weather.sqlite3', metadata, provider, weather)
+bd.get_data('Volgograd,Russia', '2020-09-20', '2020-09-29')
+bd.to_print()
 
-for row in c.execute(select([weather])):
-    print(row)
+
+
+
+
