@@ -87,5 +87,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1440.180.1440.860@0.0.1920.1040" timestamp="1603801795705" />
+    <state x="-1024" y="434" key="com.intellij.ide.util.TipDialog" timestamp="1603818101109">
+      <screen x="-1440" y="180" width="1440" height="860" />
+    </state>
+    <state x="-1024" y="434" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603818101109" />
   </component>
 </project>
