@@ -1,6 +1,14 @@
 import requests
 from sqlalchemy import create_engine, Table, Column, String, Float, MetaData
 from sqlalchemy.sql import select
+from abc import ABCMeta, abstractmethod
+
+class BDInterface:
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def write_data(self, provider_in): raise NotImplementedError
+    def to_print(self): raise NotImplementedError
 
 class WeatherProvider:
     def __init__(self, key):
@@ -30,7 +38,7 @@ class WeatherProvider:
         ]
 
 
-class Sql_bd(object):
+class Sql_bd(BDInterface):
     def __init__(self, url, metadata_in,  table_in):
         self.url_sql = url
         self.table = table_in
