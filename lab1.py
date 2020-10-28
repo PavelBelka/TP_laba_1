@@ -31,22 +31,20 @@ class WeatherProvider:
 
 
 class Sql_bd(object):
-    def __init__(self, url, metadata_in, provider_in, table_in):
+    def __init__(self, url, metadata_in,  table_in):
         self.url_sql = url
-        self.provider = provider_in
         self.table = table_in
         self.metadata = metadata_in
         self.engine = create_engine(self.url_sql)
         self.metadata.create_all(self.engine)
         self.c = self.engine.connect()
 
-    def get_data(self, locate, start_time, end_time):
-        self.c.execute(self.table.insert(), self.provider.get_data(locate, start_time, end_time))
+    def write_data(self, provider_in):
+        self.c.execute(self.table.insert(), provider_in)
 
     def to_print(self):
         for row in self.c.execute(select([self.table])):
             print(row)
-
 
 metadata = MetaData()
 weather = Table(
@@ -59,8 +57,8 @@ weather = Table(
     Column('humidity', Float),
 )
 provider = WeatherProvider('I3D60I88UB6KPSDAVGK38HNP5')
-bd = Sql_bd('sqlite:///weather.sqlite3', metadata, provider, weather)
-bd.get_data('Volgograd,Russia', '2020-09-20', '2020-09-29')
+bd = Sql_bd('sqlite:///weather.sqlite3', metadata, weather)
+bd.write_data(provider.get_data('Volgograd,Russia', '2020-09-20', '2020-09-29'))
 bd.to_print()
 
 

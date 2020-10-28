@@ -29,9 +29,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Python 3.7.3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab1.py" />
@@ -63,26 +63,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1001" y="224" key="#lab1" timestamp="1603878494498">
+      <screen x="-1440" y="180" width="1440" height="860" />
+    </state>
+    <state x="-1001" y="224" key="#lab1/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603878494498" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1603801676718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1440.180.1440.860@0.0.1920.1040" timestamp="1603801676718" />
-    <state width="1419" height="130" key="GridCell.Tab.0.bottom" timestamp="1603817745781">
+    <state width="1419" height="130" key="GridCell.Tab.0.bottom" timestamp="1603878620937">
       <screen x="-1440" y="180" width="1440" height="860" />
     </state>
-    <state width="1419" height="130" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603817745781" />
-    <state width="1419" height="130" key="GridCell.Tab.0.center" timestamp="1603817745780">
+    <state width="1419" height="130" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603878620937" />
+    <state width="1419" height="130" key="GridCell.Tab.0.center" timestamp="1603878620937">
       <screen x="-1440" y="180" width="1440" height="860" />
     </state>
-    <state width="1419" height="130" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603817745780" />
-    <state width="1419" height="130" key="GridCell.Tab.0.left" timestamp="1603817745780">
+    <state width="1419" height="130" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603878620937" />
+    <state width="1419" height="130" key="GridCell.Tab.0.left" timestamp="1603878620937">
       <screen x="-1440" y="180" width="1440" height="860" />
     </state>
-    <state width="1419" height="130" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603817745780" />
-    <state width="1419" height="130" key="GridCell.Tab.0.right" timestamp="1603817745780">
+    <state width="1419" height="130" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603878620937" />
+    <state width="1419" height="130" key="GridCell.Tab.0.right" timestamp="1603878620937">
       <screen x="-1440" y="180" width="1440" height="860" />
     </state>
-    <state width="1419" height="130" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603817745780" />
+    <state width="1419" height="130" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.180.1440.860@-1440.180.1440.860" timestamp="1603878620937" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1603801795705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
