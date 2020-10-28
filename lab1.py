@@ -10,7 +10,13 @@ class BDInterface:
     def write_data(self, provider_in): raise NotImplementedError
     def to_print(self): raise NotImplementedError
 
-class WeatherProvider:
+class ProvInterface:
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def get_data(self, location, start_date, end_date): raise NotImplementedError
+
+class WeatherProvider(ProvInterface):
     def __init__(self, key):
         self.key = key
 
