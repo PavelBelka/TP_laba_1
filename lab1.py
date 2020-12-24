@@ -21,7 +21,7 @@ class WeatherProvider(ProvInterface):
         self.key = key
 
     def get_data(self, location, start_date, end_date):
-        url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/historyhttps://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/history'
+        url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/history'
         params = {
             'aggregateHours': 24,
             'startDateTime': f'{start_date}T00:0:00',
@@ -32,6 +32,7 @@ class WeatherProvider(ProvInterface):
             'contentType': 'json',
         }
         data = requests.get(url, params).json()
+        print(data)
         return [
             {
                 'date': row['datetimeStr'][:10],
